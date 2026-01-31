@@ -14,12 +14,6 @@ database:
   max_open_conns: 100
   max_idle_conns: 10
 
-redis:
-  host: "localhost"
-  port: 6379
-  password: "" # 从环境变量 REDIS_PASSWORD 读取
-  db: 0
-
 jwt:
   secret: "your-secret-key-change-in-production" # 从环境变量 JWT_SECRET 读取
   expire_time: 24 # 小时
