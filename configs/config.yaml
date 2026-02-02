@@ -1,5 +1,4 @@
-# 环境由 APP_ENV 控制（未设或 development = 开发，production = 生产）
-# 开发：不设 APP_ENV 时 DB 默认用 ink-ruler-dev；生产：在平台设置 APP_ENV=production、JWT_SECRET、DB_* 等
+# 单环境配置，通过环境变量覆盖 DB_*、JWT_SECRET 等（部署时在平台设置）
 
 server:
   port: "8080"
