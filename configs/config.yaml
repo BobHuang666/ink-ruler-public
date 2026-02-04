@@ -1,5 +1,3 @@
-# 单环境配置，通过环境变量覆盖 DB_*、JWT_SECRET 等（部署时在平台设置）
-
 server:
   port: "8080"
   mode: "debug" # debug, release, test
@@ -11,12 +9,12 @@ database:
   port: 3306
   user: "root"
   password: "" # 从环境变量 DB_PASSWORD 读取
-  dbname: "ink-ruler" # 开发且未设 DB_NAME 时会被改为 ink-ruler-dev
+  dbname: "ink-ruler"
   charset: "utf8mb4"
   max_open_conns: 100
   max_idle_conns: 10
 
 jwt:
-  secret: "your-secret-key-change-in-production" # 从环境变量 JWT_SECRET 读取；生产必填
+  secret: "your-secret-key-change-in-production" # 从环境变量 JWT_SECRET 读取
   expire_time: 24 # 小时
 
