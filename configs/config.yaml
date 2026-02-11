@@ -18,3 +18,10 @@ jwt:
   secret: "your-secret-key-change-in-production" # 从环境变量 JWT_SECRET 读取
   expire_time: 24 # 小时
 
+smtp:
+  host: "smtp.163.com"       # 如 smtp.qq.com、smtp.163.com
+  port: 465      # 465(SSL) 或 587(TLS)
+  user: "Inkruler_notify@163.com"
+  password: ""    # 邮箱授权码，非登录密码
+  from: "Inkruler_notify@163.com"        # 发件人地址
+
