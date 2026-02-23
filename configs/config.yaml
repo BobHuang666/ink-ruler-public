@@ -25,3 +25,19 @@ smtp:
   password: ""    # 邮箱授权码，非登录密码
   from: "Inkruler_notify@163.com"        # 发件人地址
 
+# 智能搜索（智能增强 + 语义检索）使用的 SiliconFlow API
+llm:
+  api_key: ""           # 必填，建议用环境变量 SILICONFLOW_API_KEY 覆盖
+  chat_model: "THUDM/GLM-4-9B-0414"
+  vision_model: "PaddlePaddle/PaddleOCR-VL-1.5"  # OCR 图片/PDF 识别，与 api_key 共用
+  embedding_model: "BAAI/bge-large-zh-v1.5"
+  reranker_model: "BAAI/bge-reranker-v2-m3"
+  chat_url: "https://api.siliconflow.cn/v1/chat/completions"
+  embed_url: "https://api.siliconflow.cn/v1/embeddings"
+  rerank_url: "https://api.siliconflow.cn/v1/rerank"
+  timeout_seconds: 30
+  similarity_threshold: 0.4    # 余弦相似度粗筛阈值
+  rerank_score_threshold: 0.2 # 精排分数阈值
+  top_k_candidates: 100
+  rerank_batch_size: 25
+
