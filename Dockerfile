@@ -5,7 +5,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
-    libmupdf3 \
+    libmupdf27.0 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY api ./
