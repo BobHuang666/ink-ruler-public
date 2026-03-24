@@ -35,9 +35,13 @@ llm:
   chat_url: "https://api.siliconflow.cn/v1/chat/completions"
   embed_url: "https://api.siliconflow.cn/v1/embeddings"
   rerank_url: "https://api.siliconflow.cn/v1/rerank"
-  timeout_seconds: 30
+  timeout_seconds: 60    # 作文批改解析可能需要较长时间，建议 60-120 秒
   similarity_threshold: 0.4    # 余弦相似度粗筛阈值
   rerank_score_threshold: 0.2 # 精排分数阈值
   top_k_candidates: 100
   rerank_batch_size: 25
 
+# 作文批改 GPU 网关（空则走 mock）；Ollama 批改可能需 3–5 分钟
+gpu:
+  gateway_url: ""
+  request_timeout_seconds: 300
